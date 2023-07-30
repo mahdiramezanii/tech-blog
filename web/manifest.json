@@ -1,6 +1,6 @@
 {
-    "name": "tech_blog",
-    "short_name": "tech_blog",
+    "name": "tech_blogg",
+    "short_name": "tech_blogg",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
