@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/splach_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,8 +8,9 @@ void main() {
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return MaterialApp(
+    home: splach_screan(),
+    );
   }
 
 }
