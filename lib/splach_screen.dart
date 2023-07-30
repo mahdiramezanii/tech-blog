@@ -16,7 +16,7 @@ class _splach_screanState extends State<splach_screan> {
   void initState(){
 
     Future.delayed(Duration(seconds: 5)).then((value){
-      Navigator.push(context, MaterialPageRoute(builder: (context){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
         return HomePage();
       }));
     });
