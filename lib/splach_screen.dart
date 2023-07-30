@@ -15,7 +15,7 @@ class _splach_screanState extends State<splach_screan> {
   @override
   void initState(){
 
-    Future.delayed(Duration(seconds: 5)).then((value){
+    Future.delayed(Duration(seconds: 2)).then((value){
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
         return HomePage();
       }));
