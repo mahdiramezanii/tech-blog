@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/my_colors.dart';
 import 'package:flutter_application_2/splach_screen.dart';
 
 void main() {
@@ -11,11 +12,14 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       theme: ThemeData(
         textTheme:const TextTheme(
+          
           headline1:TextStyle(
             fontFamily: "dana",
             fontSize: 16,
-            fontWeight: FontWeight.w300
+            fontWeight: FontWeight.w300,
+            color: SolidCollors.homeCoverText
           ),
+
         )
       ),
     home: splach_screan(),
