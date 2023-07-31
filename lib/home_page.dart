@@ -116,7 +116,7 @@ class HomePage extends StatelessWidget {
                     }),
               ),
             ),
-            Text("مشهده داغترین نوشته ها ")
+            Text("مشاهده داغترین نوشته ها ")
           ],
         ),
       ),
