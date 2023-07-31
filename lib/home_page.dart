@@ -89,7 +89,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(0,10,0,0),
+              padding: const EdgeInsets.fromLTRB(0,40,0,0),
               child: Container(
                 height: 30,
                 width: 500,
@@ -104,7 +104,7 @@ class HomePage extends StatelessWidget {
                           width: 100 ,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              gradient: LinearGradient(colors: GradinatCollors.hashtagGradinatColor,
+                              gradient: const LinearGradient(colors: GradinatCollors.hashtagGradinatColor,
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter
                               )
@@ -115,7 +115,8 @@ class HomePage extends StatelessWidget {
                       );
                     }),
               ),
-            )
+            ),
+            Text("مشهده داغترین نوشته ها ")
           ],
         ),
       ),
