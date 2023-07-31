@@ -45,20 +45,19 @@ class HomePage extends StatelessWidget{
                         image: DecorationImage(image: AssetImage(Assets.images.programming.path),
                         fit: BoxFit.fill)
                       ),
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height/4.2,
-                      width: MediaQuery.of(context).size.width/1.20,
-                      decoration: BoxDecoration(
+                      foregroundDecoration: BoxDecoration(
+
+                        
                         borderRadius: BorderRadius.circular(16),
                         gradient:LinearGradient(colors: GradinatCollors.homeCoverImage,
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter
-                        )
+
                       ),
                     ),
+                    
 
-                    Positioned(
+                    const Positioned(
                       left: 0,
                       right: 0,
                       bottom: 0,
