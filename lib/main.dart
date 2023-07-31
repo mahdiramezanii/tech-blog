@@ -25,6 +25,13 @@ class MyApp extends StatelessWidget{
             fontSize: 18,
             color: SolidCollors.homeCoverTitelText,
             fontWeight: FontWeight.w700
+          ),
+          headline3: 
+          TextStyle(
+            fontFamily: "dana",
+            fontSize: 20,
+            fontWeight: FontWeight.w300,
+            color: SolidCollors.titleHotText
           )
 
         )

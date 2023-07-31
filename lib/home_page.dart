@@ -6,6 +6,7 @@ import 'package:flutter_application_2/fake_data.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
 import 'package:flutter_application_2/models/data.dart';
 import 'package:flutter_application_2/my_colors.dart';
+import 'package:flutter_application_2/my_string.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -89,7 +90,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(0,40,0,0),
+              padding: const EdgeInsets.fromLTRB(30,40,30,0),
               child: Container(
                 height: 30,
                 width: 500,
@@ -117,12 +118,15 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(10,20,0,0),
+              padding: const EdgeInsets.fromLTRB(30,30,30,0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text("مشاهده داغترین نوشته ها "),
-                  Icon(Icons.pentagon)
+                  Text(MyString.viewHotText,style: Theme.of(context).textTheme.headline3,),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height/37.7,
+                    width: MediaQuery.of(context).size.width/19.7,
+                    child: Image(image: AssetImage(Assets.images.pen.path),))
                 ],
               ),
             )
