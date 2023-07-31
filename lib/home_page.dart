@@ -116,7 +116,13 @@ class HomePage extends StatelessWidget {
                     }),
               ),
             ),
-            Text("مشاهده داغترین نوشته ها ")
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text("مشاهده داغترین نوشته ها "),
+                Icon(Icons.pentagon)
+              ],
+            )
           ],
         ),
       ),
