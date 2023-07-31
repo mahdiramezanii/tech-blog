@@ -1,10 +1,10 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_2/fake_data.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
+import 'package:flutter_application_2/models/data.dart';
 import 'package:flutter_application_2/my_colors.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,16 +20,16 @@ class HomePage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Icon(CupertinoIcons.search),
+                  const Icon(CupertinoIcons.search),
                   SizedBox(
                       height: MediaQuery.of(context).size.height / 13,
                       width: MediaQuery.of(context).size.width / 3.7,
                       child: Image.asset(Assets.images.headicon.path)),
-                  Icon(Icons.menu),
+                  const Icon(Icons.menu),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Stack(
@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                           fit: BoxFit.fill)),
                   foregroundDecoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                           colors: GradinatCollors.homeCoverImage,
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter)),
@@ -60,11 +60,11 @@ class HomePage extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.remove_red_eye_sharp,
                                 color: Colors.white,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               Text(
@@ -92,21 +92,25 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(0,10,0,0),
               child: Container(
                 height: 30,
-                width: 400,
+                width: 500,
                 child: ListView.builder(
-                    itemCount: 20,
+                    itemCount: category_item.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (BuildContext context, int index) {
                       return Padding(
-                        padding: const EdgeInsets.fromLTRB(5,0,5,0),
+                        padding:  EdgeInsets.fromLTRB(5,0,5,0),
                         child: Container(
                           height: 20,
-                          width: 60,
+                          width: 100 ,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Colors.black),
+                              gradient: LinearGradient(colors: GradinatCollors.hashtagGradinatColor,
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter
+                              )
+                              ),
                       
-                              child: Center(child: Text("data",style: TextStyle(color: Colors.white),)),
+                              child: Center(child: Text("${category_item[index].name!} #",style: const TextStyle(color: Colors.white),)),
                         ),
                       );
                     }),
