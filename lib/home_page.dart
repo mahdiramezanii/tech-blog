@@ -79,7 +79,9 @@ class HomePage extends StatelessWidget{
                                 Text(TextPosterHome["writer"],style: Theme.of(context).textTheme.headline1,),
                               ],
                             ),
-                            Text(TextPosterHome["title"],style: Theme.of(context).textTheme.headline2,)
+                            Text(TextPosterHome["title"],style: Theme.of(context).textTheme.headline2,),
+
+                          
                             
                             
                             
@@ -90,7 +92,23 @@ class HomePage extends StatelessWidget{
                     
                   ],
                 )
+          ,Container(
+                              height: 60,
+                              width: double.infinity,
+                              
+
+                              child: 
+                              ListView.builder(
+                              itemCount: 5,
+                              scrollDirection: Axis.vertical,
+                              itemBuilder: (BuildContext context,int index){
+
+
+                                return Text("test",style: TextStyle(color: Color.fromARGB(255, 172, 26, 26)),);
+                              }),
+                            )
           ],
+          
         ),
         
       ),
