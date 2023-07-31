@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_2/fake_data.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
 import 'package:flutter_application_2/my_colors.dart';
 
@@ -42,32 +43,41 @@ class HomePage extends StatelessWidget{
                       width: MediaQuery.of(context).size.width/1.20,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
-                        image: DecorationImage(image: AssetImage(Assets.images.programming.path),
+                        image: DecorationImage(image: AssetImage(TextPosterHome["image"]),
                         fit: BoxFit.fill)
                       ),
-                      foregroundDecoration: BoxDecoration(
-
-                        
+                      foregroundDecoration:BoxDecoration(
+                      
                         borderRadius: BorderRadius.circular(16),
                         gradient:LinearGradient(colors: GradinatCollors.homeCoverImage,
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter
+                        )
 
                       ),
                     ),
                     
 
-                    const Positioned(
+                    Positioned(
                       left: 0,
                       right: 0,
                       bottom: 0,
                       child: Column(
+                        
                         children: [
-                          Row(children: [
-                            Text("Like 253"),
-                            Text("ملیکا عزیزی"),
+                          
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text("Like ${TextPosterHome["like"]}",style: Theme.of(context).textTheme.headline1,),
+                                Text(TextPosterHome["writer"],style: Theme.of(context).textTheme.headline1,),
+                              ],
+                            ),
+                            Text(TextPosterHome["title"],style: Theme.of(context).textTheme.headline1,)
                             
-                          ],)
+                            
+                            
+                      
                         ],
                       ),
                     )
