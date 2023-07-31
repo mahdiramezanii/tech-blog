@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class SolidCollors{
 
   static const Color primayColor=Color.fromARGB(255, 66, 4, 87);
-  static const Color homeCoverText=Colors.white;
+  static const Color homeCoverText=Color.fromARGB(199, 255, 255, 255);
+  static const Color homeCoverTitelText=Color.fromARGB(255, 250, 250, 250);
 
 }
 

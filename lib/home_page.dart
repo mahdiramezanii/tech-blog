@@ -69,11 +69,17 @@ class HomePage extends StatelessWidget{
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                Text("Like ${TextPosterHome["like"]}",style: Theme.of(context).textTheme.headline1,),
+                                Row(
+                                  children: [
+                                    Icon(Icons.remove_red_eye_sharp,color: Colors.white,),
+                                    SizedBox(width: 10,),
+                                    Text("${TextPosterHome["like"]}",style: Theme.of(context).textTheme.headline1,),
+                                  ],
+                                ),
                                 Text(TextPosterHome["writer"],style: Theme.of(context).textTheme.headline1,),
                               ],
                             ),
-                            Text(TextPosterHome["title"],style: Theme.of(context).textTheme.headline1,)
+                            Text(TextPosterHome["title"],style: Theme.of(context).textTheme.headline2,)
                             
                             
                             

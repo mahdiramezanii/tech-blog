@@ -19,6 +19,12 @@ class MyApp extends StatelessWidget{
             fontWeight: FontWeight.w300,
             color: SolidCollors.homeCoverText
           ),
+          headline2: TextStyle(
+            fontFamily: "dana",
+            fontSize: 18,
+            color: SolidCollors.homeCoverTitelText,
+            fontWeight: FontWeight.w700
+          )
 
         )
       ),
