@@ -116,12 +116,15 @@ class HomePage extends StatelessWidget {
                     }),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text("مشاهده داغترین نوشته ها "),
-                Icon(Icons.pentagon)
-              ],
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10,20,0,0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("مشاهده داغترین نوشته ها "),
+                  Icon(Icons.pentagon)
+                ],
+              ),
             )
           ],
         ),
