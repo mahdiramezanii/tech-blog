@@ -21,7 +21,7 @@ class GradinatCollors {
   ];
 
   static const List<Color> hashtagGradinatColor=[
-    Color.fromARGB(200, 48, 48, 49) ,
+    Color.fromARGB(199, 33, 33, 35) ,
     Color.fromARGB(255, 20, 19, 19),
      ];
 }
