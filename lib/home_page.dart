@@ -149,46 +149,54 @@ class HomePage extends StatelessWidget {
           //secoun list view show hot text
           Column(
             children: [
-              Stack(
-                children: [
-                  SizedBox(height: 50,),
-                  SizedBox(
-                    height: size.height/4,
-                    child: 
-                    ListView.builder(
-                      itemCount: 10,
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (BuildContext context , int index){
+              SizedBox(height: 50,),
+              SizedBox(
+                height: size.height/4,
+                child: 
+                ListView.builder(
+                  itemCount: 10,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context , int index){
 
 
-                      return Padding(
-                        padding: const EdgeInsets.fromLTRB(0,0,29,0),
-                        child: Container(
-                      
-                          height: size.height/4,
-                          width: size.width/2.7,
-                          
-                      
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(16)),
-                            image: DecorationImage(image: AssetImage(Assets.images.programming.path)
-                            ,fit: BoxFit.cover)
-                            
-                          ),
+                  return Padding(
+                    padding: const EdgeInsets.fromLTRB(0,0,29,0),
+                    child: Stack(children: [
 
-                          foregroundDecoration:const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(16)),
-                            gradient: LinearGradient(colors:GradinatCollors.listViewHotText,
-                            begin: Alignment.bottomRight,
-                            end: Alignment.centerLeft )
-                            
-                          ),
-                        ),
-                      );
-                    })
+                      Container(
                   
-                  )
-                ],
+                      height: size.height/4,
+                      width: size.width/2.7,
+                      
+                  
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(16)),
+                        image: DecorationImage(image: AssetImage(Assets.images.programming.path)
+                        ,fit: BoxFit.cover)
+                        
+                      ),
+
+                      foregroundDecoration:const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(16)),
+                        gradient: LinearGradient(colors:GradinatCollors.listViewHotText,
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter )
+                        
+                      ),
+                    ),
+                    Positioned(
+                      left: 5,
+                      bottom: 5,
+                      child: Row(children: [
+                        Text("250",style:Theme.of(context).textTheme.headline1),
+                        Icon(Icons.remove_red_eye,color: Colors.white,),
+                        
+                      ],),
+                    )
+                    ],)
+                  );
+                })
+              
               )
             ],
           )
