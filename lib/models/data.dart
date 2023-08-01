@@ -11,16 +11,16 @@ class Category{
 
 List <Category> category_item=[
 
-  Category(name: "Programming", id: "1"),
-  Category(name: "c++", id: "2"),
-  Category(name: "Djnago", id: "3"),
-  Category(name: "Flutter", id: "4"),
-  Category(name: "Dart", id: "5"),
-  Category(name: "Python", id: "6"),
-  Category(name: "Pycharm", id: "7"),
-  Category(name: "monogodb", id: "8"),
-  Category(name: "Jetbrians", id: "9"),
-  Category(name: "Golang", id: "10"),
+  Category(name: "جاوا", id: "1"),
+  Category(name: "پایتون", id: "2"),
+  Category(name: "جنگو", id: "3"),
+  Category(name: "فلاتر", id: "4"),
+  Category(name: "دارت", id: "5"),
+  Category(name: "هوش مصنوعی", id: "6"),
+  Category(name: "تست نویسی", id: "7"),
+  Category(name: "بک اند", id: "8"),
+  Category(name: "تست", id: "9"),
+  Category(name: "تست", id: "10"),
 
 
 ];

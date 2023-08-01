@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/my_colors.dart';
 import 'package:flutter_application_2/splach_screen.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
 void main() {
   runApp(MyApp());
 }
@@ -11,6 +11,15 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+       localizationsDelegates: [
+    GlobalMaterialLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+  ],
+  supportedLocales: [
+    Locale('fa'), // English
+
+  ],
       theme: ThemeData(
         textTheme:const TextTheme(
           
