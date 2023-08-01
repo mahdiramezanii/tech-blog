@@ -25,4 +25,9 @@ class GradinatCollors {
     Color.fromARGB(199, 33, 33, 35) ,
     Color.fromARGB(255, 20, 19, 19),
      ];
+
+    static const List<Color> listViewHotText=[
+      Color.fromARGB(15, 216, 212, 212),
+      Color.fromARGB(20, 204, 200, 200)
+    ];
 }

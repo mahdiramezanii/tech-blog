@@ -147,8 +147,9 @@ class HomePage extends StatelessWidget {
             children: [
               Stack(
                 children: [
+                  SizedBox(height: 50,),
                   SizedBox(
-                    height: size.height/3,
+                    height: size.height/4,
                     child: 
                     ListView.builder(
                       itemCount: 10,
@@ -160,18 +161,22 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.fromLTRB(0,0,29,0),
                         child: Container(
                       
-                          height: size.height/3,
-                          width: size.width/2.5,
+                          height: size.height/4,
+                          width: size.width/2.7,
                           
                       
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(16)),
-                            image: DecorationImage(image: AssetImage(Assets.images.programming.path))
+                            image: DecorationImage(image: AssetImage(Assets.images.programming.path)
+                            ,fit: BoxFit.cover)
+                            
                           ),
 
                           foregroundDecoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(16)),
-                            gradient: LinearGradient(colors: )
+                            gradient: LinearGradient(colors:GradinatCollors.listViewHotText,
+                            begin: Alignment.bottomRight,
+                            end: Alignment.centerLeft )
                             
                           ),
                         ),
