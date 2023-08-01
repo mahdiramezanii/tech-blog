@@ -11,7 +11,7 @@ class Category{
 
 List <Category> category_item=[
 
-  Category(name: "برنامه نویسی", id: "1"),
+  Category(name: "Programming", id: "1"),
   Category(name: "c++", id: "2"),
   Category(name: "Djnago", id: "3"),
   Category(name: "Flutter", id: "4"),

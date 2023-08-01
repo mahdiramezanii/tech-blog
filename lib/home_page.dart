@@ -92,33 +92,36 @@ class HomePage extends StatelessWidget {
                 )
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(30,40,30,0),
-              child: Container(
-                height: 30,
-                width: 500,
-                child: ListView.builder(
-                    itemCount: category_item.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding:  EdgeInsets.fromLTRB(5,0,5,0),
-                        child: Container(
-                          height: 20,
-                          width: 100 ,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              gradient: const LinearGradient(colors: GradinatCollors.hashtagGradinatColor,
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter
-                              )
-                              ),
-                      
-                              child: Center(child: Text("${category_item[index].name!} #",style: const TextStyle(color: Colors.white),)),
-                        ),
-                      );
-                    }),
-              ),
+            SizedBox(height: 30,),
+            SizedBox(
+              height: 60,
+              child: ListView.builder(
+                  itemCount: category_item.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (BuildContext context, int index) {
+
+                    return Padding(
+                      padding: EdgeInsets.fromLTRB(5,5,index==0?30:5,5),
+                      child: Container(
+                        height: 60,
+                        width: 100,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(24)),
+                            gradient: const LinearGradient(colors: GradinatCollors.hashtagGradinatColor,
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter
+                            )
+                            ),
+                    
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                              Text(category_item[index].name!,style: TextStyle(color:Colors.white)),
+                              
+                            ],
+                      )),
+                    );
+                  }),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(30,30,30,0),
