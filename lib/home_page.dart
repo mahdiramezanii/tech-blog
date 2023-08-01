@@ -106,7 +106,7 @@ class HomePage extends StatelessWidget {
                       child: Container(
                           height: 60,
                           width: 100,
-                          decoration: BoxDecoration(
+                          decoration:const  BoxDecoration(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(24)),
                               gradient: const LinearGradient(
@@ -116,8 +116,12 @@ class HomePage extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Text(category_item[index].name!,
+                              Row(children: [
+                                ImageIcon(AssetImage(Assets.icons.hashtag.path),size: 15,color: Colors.white,),
+                                Text(category_item[index].name!,
                                   style: TextStyle(color: Colors.white)),
+                                  
+                              ],)
                             ],
                           )),
                     );
@@ -142,7 +146,7 @@ class HomePage extends StatelessWidget {
               ),
             )
           ,
-          
+          //secoun list view show hot text
           Column(
             children: [
               Stack(
@@ -172,7 +176,7 @@ class HomePage extends StatelessWidget {
                             
                           ),
 
-                          foregroundDecoration: BoxDecoration(
+                          foregroundDecoration:const BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(16)),
                             gradient: LinearGradient(colors:GradinatCollors.listViewHotText,
                             begin: Alignment.bottomRight,
