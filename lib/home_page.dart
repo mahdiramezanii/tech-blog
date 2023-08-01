@@ -11,6 +11,9 @@ import 'package:flutter_application_2/my_string.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
+    var size=MediaQuery.of(context).size;
+
     return SafeArea(
       child: Scaffold(
         body: Column(
