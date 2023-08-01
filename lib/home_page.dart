@@ -141,6 +141,48 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             )
+          ,
+          
+          Column(
+            children: [
+              Stack(
+                children: [
+                  SizedBox(
+                    height: size.height/3,
+                    child: 
+                    ListView.builder(
+                      itemCount: 10,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (BuildContext context , int index){
+
+
+                      return Padding(
+                        padding: const EdgeInsets.fromLTRB(0,0,29,0),
+                        child: Container(
+                      
+                          height: size.height/3,
+                          width: size.width/2.5,
+                          
+                      
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(16)),
+                            image: DecorationImage(image: AssetImage(Assets.images.programming.path))
+                          ),
+
+                          foregroundDecoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(16)),
+                            gradient: LinearGradient(colors: )
+                            
+                          ),
+                        ),
+                      );
+                    })
+                  
+                  )
+                ],
+              )
+            ],
+          )
           ],
         ),
       ),
