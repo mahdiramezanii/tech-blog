@@ -11,8 +11,7 @@ import 'package:flutter_application_2/my_string.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
-    var size=MediaQuery.of(context).size;
+    var size = MediaQuery.of(context).size;
 
     return SafeArea(
       child: Scaffold(
@@ -92,47 +91,53 @@ class HomePage extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             SizedBox(
               height: 60,
               child: ListView.builder(
                   itemCount: category_item.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (BuildContext context, int index) {
-
                     return Padding(
-                      padding: EdgeInsets.fromLTRB(5,5,index==0?30:5,5),
+                      padding:
+                          EdgeInsets.fromLTRB(5, 5, index == 0 ? 30 : 5, 5),
                       child: Container(
-                        height: 60,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(24)),
-                            gradient: const LinearGradient(colors: GradinatCollors.hashtagGradinatColor,
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter
-                            )
-                            ),
-                    
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                              Text(category_item[index].name!,style: TextStyle(color:Colors.white)),
-                              
+                          height: 60,
+                          width: 100,
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(24)),
+                              gradient: const LinearGradient(
+                                  colors: GradinatCollors.hashtagGradinatColor,
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text(category_item[index].name!,
+                                  style: TextStyle(color: Colors.white)),
                             ],
-                      )),
+                          )),
                     );
                   }),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(30,30,30,0),
+              padding: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(MyString.viewHotText,style: Theme.of(context).textTheme.headline3,),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height/37.7,
-                    width: MediaQuery.of(context).size.width/19.7,
-                    child: Image(image: AssetImage(Assets.images.pen.path),))
+                      height: MediaQuery.of(context).size.height / 37.7,
+                      width: MediaQuery.of(context).size.width / 19.7,
+                      child: Image(
+                        image: AssetImage(Assets.images.pen.path),
+                      )),
+                  Text(
+                    MyString.viewHotText,
+                    style: Theme.of(context).textTheme.headline3,
+                  ),
                 ],
               ),
             )
