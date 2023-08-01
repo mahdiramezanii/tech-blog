@@ -152,7 +152,7 @@ class HomePage extends StatelessWidget {
               children: [
                 SizedBox(height: 50,),
                 SizedBox(
-                  height: size.height/4,
+                  width: size.height/4,
                   child: 
                   ListView.builder(
                     itemCount: 10,
@@ -162,7 +162,8 @@ class HomePage extends StatelessWidget {
         
                     return Padding(
                       padding: const EdgeInsets.fromLTRB(0,0,29,0),
-                      child: Stack(children: [
+                      child: Column(children: [
+                        Stack(children: [
         
                         Container(
                     
@@ -199,6 +200,11 @@ class HomePage extends StatelessWidget {
                         right: 5
                         ,child: Text("ملیکا عزیزی",style: Theme.of(context).textTheme.headline1,)),
                       ],)
+                      ,
+                      Text("من یک برنامه نویس فلاتر هستم که شبانه در در تلاش هستمک که فلاتر را به خوبی یاد بگیرم و امیدوار هستم و ",
+                      overflow: TextOverflow.ellipsis,
+                      
+                      maxLines: 2,)],)
                     );
                   })
                 
