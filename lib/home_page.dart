@@ -151,18 +151,19 @@ class HomePage extends StatelessWidget {
             children: [
               SizedBox(height: 50,),
               SizedBox(
-                height: size.height/4,
+                width: size.height/4,
                 child: 
                 ListView.builder(
                   itemCount: 10,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (BuildContext context , int index){
-
-
+        
+        
                   return Padding(
                     padding: const EdgeInsets.fromLTRB(0,0,29,0),
-                    child: Stack(children: [
-
+                    child: Column(children: [
+                      Stack(children: [
+        
                       Container(
                   
                       height: size.height/4,
@@ -175,7 +176,7 @@ class HomePage extends StatelessWidget {
                         ,fit: BoxFit.cover)
                         
                       ),
-
+        
                       foregroundDecoration:const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(16)),
                         gradient: LinearGradient(colors:GradinatCollors.listViewHotText,
@@ -189,10 +190,16 @@ class HomePage extends StatelessWidget {
                       bottom: 5,
                       child: Row(children: [
                         Text("250",style:Theme.of(context).textTheme.headline1),
-                        Icon(Icons.remove_red_eye,color: Colors.white,),
+                        const Icon(Icons.remove_red_eye,color: Colors.white,),
                         
                       ],),
-                    )
+                      
+                    ),Positioned(
+                      bottom: 5,
+                      right: 5
+                      ,child: Text("ملیکا عزیزی",style: Theme.of(context).textTheme.headline1,)),
+                    ],)
+                    ,
                     ],)
                   );
                 })
@@ -200,7 +207,51 @@ class HomePage extends StatelessWidget {
               )
             ],
           )
+          ,
+          Column(children: [
+            SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.only(right:30),
+              child: Row(children: [
+
+                Icon(Icons.mail,color:Colors.blue),
+                Text("مشاهده داغترین پادکست ها",style:Theme.of(context).textTheme.headline3),
+                
+              ],),
+
+            
+            ),SizedBox(
+              height: size.height/4,
+              child: ListView.builder(
+                itemCount: 10,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (BuildContext context,int index){
+
+                return Padding(
+                  padding: const EdgeInsets.fromLTRB(10,5,30,30),
+                  child: Column(children: [
+                    Container(
+                    height: size.height/4,
+                        width: size.width/2.7,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                      image:DecorationImage(image: AssetImage(Assets.images.programming.path),
+                      fit: BoxFit.cover),
+
+                      
+                      
+                    ),
+                    
+                  ),
+                  
+                  ],)
+                );
+              }),
+            )
+          ],)
           ],
+
+          
         ),
       ),
     );
