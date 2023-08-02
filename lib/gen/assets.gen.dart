@@ -9,16 +9,6 @@
 
 import 'package:flutter/widgets.dart';
 
-class $AssetsIconsGen {
-  const $AssetsIconsGen();
-
-  /// File path: assets/icons/hashtag.png
-  AssetGenImage get hashtag => const AssetGenImage('assets/icons/hashtag.png');
-
-  /// List of all assets
-  List<AssetGenImage> get values => [hashtag];
-}
-
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -43,7 +33,6 @@ class $AssetsImagesGen {
 class Assets {
   Assets._();
 
-  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
