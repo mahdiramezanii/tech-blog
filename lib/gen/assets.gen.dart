@@ -15,8 +15,11 @@ class $AssetsIconsGen {
   /// File path: assets/icons/hashtag.png
   AssetGenImage get hashtag => const AssetGenImage('assets/icons/hashtag.png');
 
+  /// File path: assets/icons/pen.png
+  AssetGenImage get pen => const AssetGenImage('assets/icons/pen.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [hashtag];
+  List<AssetGenImage> get values => [hashtag, pen];
 }
 
 class $AssetsImagesGen {
@@ -29,15 +32,12 @@ class $AssetsImagesGen {
   /// File path: assets/images/icon.png
   AssetGenImage get icon => const AssetGenImage('assets/images/icon.png');
 
-  /// File path: assets/images/pen.png
-  AssetGenImage get pen => const AssetGenImage('assets/images/pen.png');
-
   /// File path: assets/images/programming.png
   AssetGenImage get programming =>
       const AssetGenImage('assets/images/programming.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [headicon, icon, pen, programming];
+  List<AssetGenImage> get values => [headicon, icon, programming];
 }
 
 class Assets {

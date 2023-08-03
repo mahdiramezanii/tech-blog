@@ -115,7 +115,27 @@ class HomePage extends StatelessWidget {
               );
             }),
           ),
-          
+          //body
+          Padding(
+            padding: EdgeInsets.only(right: size.width/12),
+            child: Column(
+              children: [
+                //View Hot Text
+                SizedBox(
+                  height: size.height/8,
+                  width: size.width,
+                  child: Row(
+                    children: [
+                    ImageIcon(AssetImage(Assets.icons.pen.path),color: Colors.blue,),
+                    Text(" مشاهده داغترین نوشته ها",style: Theme.of(context).textTheme.headline3,),
+                  ],),
+                ),
+                //List View Slider Hot Text
+                
+              ],
+            ),
+          )
+
         ],
       )),
     );
