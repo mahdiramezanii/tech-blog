@@ -13,8 +13,25 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
 
-    return  Scaffold(
-            body: Text("Mahdi"),
+    return  SafeArea(
+      child: Scaffold(
+              body:Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround
+                    ,children: [
+                    Icon(Icons.menu),
+                    SizedBox(
+                      height: 50,
+                      width: 50,
+                      child:
+                      Image(image: AssetImage(Assets.images.headicon.path))),
+                    Icon(Icons.search)
+    
+                  ],)
+                ],
+              )
+      ),
     );
     
   }}
