@@ -84,6 +84,37 @@ class HomePage extends StatelessWidget {
             ],
           ),
           //Hashatg List
+          SizedBox(height: size.height/13,),
+          SizedBox(
+            height: size.height/18,
+
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: category_item.length,
+              itemBuilder: (BuildContext context , int index){
+
+              return Padding(
+                padding: EdgeInsets.fromLTRB(0,0,index==0?size.width/12:20,0),
+                child: Container(
+                  height: size.height/18,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: const Color.fromARGB(255, 18, 14, 14)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(4),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                      ImageIcon(AssetImage(Assets.icons.hashtag.path),color: Colors.white,size: 10,),
+                      Text("  ${category_item[index].name!} ",style: Theme.of(context).textTheme.headline1),
+                      
+                    ]),
+                  ),
+                ),
+              );
+            }),
+          ),
           
         ],
       )),
