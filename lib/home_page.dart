@@ -16,7 +16,8 @@ class HomePage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           body: Column(
-        children: [
+          //crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
           //header applixation
           Padding(
             padding: const EdgeInsets.fromLTRB(0,10,0,0),
@@ -116,12 +117,12 @@ class HomePage extends StatelessWidget {
             }),
           ),
           //body
-          Padding(
-            padding: EdgeInsets.only(right: size.width/12),
-            child: Column(
-              children: [
-                //View Hot Text
-                SizedBox(
+          Column(
+            children: [
+              //View Hot Text
+              Padding(
+                padding: EdgeInsets.only(right: size.width/12),
+                child: SizedBox(
                   height: size.height/8,
                   width: size.width,
                   child: Row(
@@ -130,10 +131,67 @@ class HomePage extends StatelessWidget {
                     Text(" مشاهده داغترین نوشته ها",style: Theme.of(context).textTheme.headline3,),
                   ],),
                 ),
-                //List View Slider Hot Text
+              ),
+              //List View Slider Hot Text
+              SizedBox(
+                height:size.height/3.7,
                 
-              ],
-            ),
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 5,
+                  itemBuilder: (BuildContext context,int index){
+
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Stack(
+                          children:[ 
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(size.width/18,0,index==0?size.width/12:0,0),
+                            child: Container(
+                              height:size.height/4.37,
+                              width: size.width/2.50,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                image: DecorationImage(
+                                image: AssetImage(Assets.images.slider.path),
+                                fit: BoxFit.cover )
+                              ),
+                              foregroundDecoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                gradient: LinearGradient(colors: GradinatCollors.listViewHotText,
+                                begin: Alignment.bottomCenter,
+                                end: Alignment.topCenter
+                                )
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 5,
+                            left: 30,
+                            right: 10,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                              Text("ملیکا عزیزی",style: Theme.of(context).textTheme.headline1,),
+                              Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text("250 ",style: Theme.of(context).textTheme.headline1,),
+                          Icon(Icons.remove_red_eye,color: Colors.white,)
+                        ],
+                      ),
+                            ],),
+                          ),
+                      ]),
+                      Text("منام نویس جنگو",
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 5,)
+                      ],
+                    );
+                  }),
+              )
+            ],
           )
 
         ],
