@@ -15,11 +15,20 @@ class $AssetsIconsGen {
   /// File path: assets/icons/hashtag.png
   AssetGenImage get hashtag => const AssetGenImage('assets/icons/hashtag.png');
 
+  /// File path: assets/icons/home.png
+  AssetGenImage get home => const AssetGenImage('assets/icons/home.png');
+
   /// File path: assets/icons/pen.png
   AssetGenImage get pen => const AssetGenImage('assets/icons/pen.png');
 
+  /// File path: assets/icons/user.png
+  AssetGenImage get user => const AssetGenImage('assets/icons/user.png');
+
+  /// File path: assets/icons/write.png
+  AssetGenImage get write => const AssetGenImage('assets/icons/write.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [hashtag, pen];
+  List<AssetGenImage> get values => [hashtag, home, pen, user, write];
 }
 
 class $AssetsImagesGen {

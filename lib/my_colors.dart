@@ -13,6 +13,7 @@ class GradinatCollors {
   
   static const List<Color> buttonNavigation=[
     Color.fromARGB(255, 27, 0, 94),
+    Color.fromARGB(255, 68, 4, 87),
   ];
   static const List<Color> homeCoverImage=[
      Color.fromARGB(0, 0, 0, 0),
