@@ -207,8 +207,21 @@ class HomePage extends StatelessWidget {
                 ),
                 
               ],
-            )
-            
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: size.width/15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                Row(
+              
+                children: [
+                Icon(Icons.mic_external_on_rounded,color: Colors.blue,),
+                Text(" مشاهده داغترین پادکست ها",style: 
+                Theme.of(context).textTheme.headline3,),
+                ],)
+              ],),
+            ),
             //
             ],
                 ),
