@@ -209,22 +209,54 @@ class HomePage extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: EdgeInsets.only(right: size.width/15),
+              padding: const EdgeInsets.only(top: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                Row(
-              
-                children: [
-                Icon(Icons.mic_external_on_rounded,color: Colors.blue,),
-                Text(" مشاهده داغترین پادکست ها",style: 
-                Theme.of(context).textTheme.headline3,),
-                ],)
+                Padding(
+                  padding: EdgeInsets.only(right: size.width/15),
+                  child: Row(
+                            
+                  children: [
+                  Icon(Icons.mic_external_on_rounded,color: Colors.blue,),
+                  Text(" مشاهده داغترین پادکست ها",style: 
+                  Theme.of(context).textTheme.headline3,),
+                  ],),
+                ),
+            
+                SizedBox(
+                
+                  height:size.height/3.2 ,
+                
+                  child: ListView.builder(
+                    itemCount: 5,
+                    scrollDirection: Axis.horizontal,
+                    
+                    itemBuilder: (BuildContext context,int index){
+                
+                    return Padding(
+                      padding:  EdgeInsets.fromLTRB(size.width/18,10,index==0?size.width/12:0,0),
+                      child: Column(children: [
+                
+                      Container(
+                      width: size.width/2.50,
+                      height:size.height/4.5,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        image: DecorationImage(image: AssetImage(Assets.images.slider.path))
+                      ),
+                                    ),
+
+                      Text("رادیو گیگ"),              
+                      ],)
+                    );
+                  }),
+                )
               ],),
             ),
             //
             ],
-                ),
+            ),
           )),
     );
   }
