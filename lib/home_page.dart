@@ -237,7 +237,7 @@ class HomePage extends StatelessWidget {
               
                   SizedBox(
                   
-                    height:size.height/3.2 ,
+                    height:size.height/2,
                   
                     child: ListView.builder(
                       itemCount: 5,
