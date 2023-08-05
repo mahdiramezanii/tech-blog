@@ -265,7 +265,23 @@ class HomePage extends StatelessWidget {
             //
             ],
             ),
-          )),
+          ),
+          bottomNavigationBar: Container(
+            height: size.height/8,
+            decoration:const  BoxDecoration(
+              gradient: LinearGradient(colors: GradinatCollors.navigatorBackground)
+            ),
+            child: Container(
+              
+
+            height: size.height/8,
+            decoration:const  BoxDecoration(
+              gradient: LinearGradient(colors: GradinatCollors.navigatorBackground)
+
+              
+            )),
+          ),
+          ),
     );
   }
 }

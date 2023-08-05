@@ -30,4 +30,9 @@ class GradinatCollors {
       Color.fromARGB(199, 0, 0, 0),
       Color.fromARGB(20, 204, 200, 200)
     ];
+
+    static const List<Color> navigatorBackground=[
+        Color.fromARGB(0, 255, 255, 255),
+        Color.fromARGB(0, 255, 255, 255),
+    ];
 }
