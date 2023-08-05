@@ -89,12 +89,12 @@ class HomePage extends StatelessWidget {
             SizedBox(height: size.height/13,),
             SizedBox(
               height: size.height/18,
-          
+            
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: category_item.length,
                 itemBuilder: (BuildContext context , int index){
-          
+            
                 return Padding(
                   padding: EdgeInsets.fromLTRB(0,0,index==0?size.width/12:20,0),
                   child: Container(
@@ -119,6 +119,7 @@ class HomePage extends StatelessWidget {
             ),
             //body
             Column(
+              
               children: [
                 //View Hot Text
                 Padding(
@@ -141,7 +142,7 @@ class HomePage extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemCount: 5,
                     itemBuilder: (BuildContext context,int index){
-          
+            
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -160,7 +161,7 @@ class HomePage extends StatelessWidget {
                                 ),
                                 foregroundDecoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(16),
-                                  gradient: LinearGradient(colors: GradinatCollors.listViewHotText,
+                                  gradient: const LinearGradient(colors: GradinatCollors.listViewHotText,
                                   begin: Alignment.bottomCenter,
                                   end: Alignment.topCenter
                                   )
@@ -185,21 +186,31 @@ class HomePage extends StatelessWidget {
                               ],),
                             ),
                         ]),
-                        SizedBox(
-                         width: size.width/2.50,
-                          child: const Text("منام بتببببالاسیلایسایااببetytghtghghhfhfhfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhfyyyyyyyyyyyyyyyyyyyyyباایبایبایانویس جنگو",
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 2,
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                          child: SizedBox(
+                           width: size.width/2.50,
+                            child:const Text("به مام حدا مهدی رمضانی هستم برنامه نویس اندروید و ios",
+                            overflow: TextOverflow.ellipsis,
+                            style:TextStyle(
+                              fontFamily: "dana",
+                              fontSize: 16,
+                              color: Colors.black
+                            ),
+                            maxLines: 2,
+                            ),
                           ),
-                        )
+                        ),
                         ],
                       );
                     }),
-                )
+                ),
+                
               ],
             )
-          
-                  ],
+            
+            //
+            ],
                 ),
           )),
     );
