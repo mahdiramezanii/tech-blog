@@ -15,25 +15,33 @@ class HomePage extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
+          //header applixation
+          appBar: AppBar(
+            elevation: 0,
+            backgroundColor: Colors.white,
+            title: Padding(
+              padding: const EdgeInsets.fromLTRB(0,10,0,0),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Icon(Icons.menu,size: 35,color: Colors.black,),
+                      SizedBox(
+                          height: size.height/13.6,
+                          width: size.width/3.7,
+                          child: Image(image: AssetImage(Assets.images.headicon.path))),
+                      const Icon(Icons.search,size: 35,color: Colors.black,),],
+                  ),
+                ],
+              ),
+             ) ,
+          ),
           body: SingleChildScrollView(
             child: Column(
             //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-            //header applixation
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0,10,0,0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const Icon(Icons.menu,size: 35,),
-                  SizedBox(
-                      height: size.height/13.6,
-                      width: size.width/3.7,
-                      child: Image(image: AssetImage(Assets.images.headicon.path))),
-                  const Icon(Icons.search,size: 35,)
-                ],
-              ),
-            ),
+
             //image poster
             Stack(
               children: [
