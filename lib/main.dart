@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/my_colors.dart';
-import 'package:flutter_application_2/splach_screen.dart';
+import 'package:flutter_application_2/views/splach_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 void main() {
   runApp(MyApp());
