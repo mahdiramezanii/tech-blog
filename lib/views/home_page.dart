@@ -7,6 +7,7 @@ import 'package:flutter_application_2/gen/assets.gen.dart';
 import 'package:flutter_application_2/models/data.dart';
 import 'package:flutter_application_2/my_colors.dart';
 import 'package:flutter_application_2/my_string.dart';
+import 'package:flutter_application_2/views/profileView.dart';
 
 import 'homeBode.dart';
 
@@ -42,7 +43,7 @@ class HomePage extends StatelessWidget {
           body: Stack(
             children:
           [
-          HomeBody(size: size),
+          ProfileView(size: size),
           Positioned(
             bottom: 10,
             left: 10,
