@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
           body: Stack(
             children:
           [
-          ProfileView(size: size),
+          Positioned.fill(child: ProfileView(size: size)),
           Positioned(
             bottom: 10,
             left: 10,
