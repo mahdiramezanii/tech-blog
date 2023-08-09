@@ -16,9 +16,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var selectedIndex=0;
+  
   @override
   Widget build(BuildContext context) {
+    
     var size = MediaQuery.of(context).size;
+    List <Widget> viewList=[
+    HomeBody(size: size),
+    ProfileView(size: size),
+  ];
 
     return SafeArea(
       child: Scaffold(
@@ -47,9 +54,13 @@ class _HomePageState extends State<HomePage> {
           body: Stack(
           children:
           [
-          Center(child: Positioned.fill(child: ProfileView(size: size))),
+          Center(child: Positioned.fill(child: viewList[selectedIndex])),
           //button Navigation
-          ButtonNavigation(size: size),]),
+          ButtonNavigation(size: size, changePage: (int value){
+              setState(() {
+                selectedIndex=value;
+              });
+          },),]),
           
           ),
     );
@@ -60,9 +71,13 @@ class ButtonNavigation extends StatelessWidget {
   const ButtonNavigation({
     super.key,
     required this.size,
+    required this.changePage,
+    
   });
 
   final Size size;
+  final Function changePage;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -91,11 +106,15 @@ class ButtonNavigation extends StatelessWidget {
         child:Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            IconButton(onPressed: (){},
+            IconButton(onPressed: (){
+              changePage(0);
+            },
              icon: ImageIcon(AssetImage(Assets.icons.home.path)),color: Colors.white,),
             IconButton(onPressed: (){},
              icon: ImageIcon(AssetImage(Assets.icons.write.path)),color: Colors.white,),
-            IconButton(onPressed: (){},
+            IconButton(onPressed: (){
+              changePage(1);
+            },
              icon: ImageIcon(AssetImage(Assets.icons.user.path),color: Colors.white,)),
           ],
         ),),
