@@ -19,7 +19,16 @@ class ProfileView extends StatelessWidget {
         //crossAxisAlignment: CrossAxisAlignment.center,
         children: [
     
-        //image poster
+        Image(image: AssetImage(Assets.images.user.path),height: 150,),
+        SizedBox(height: 35,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+          
+          ImageIcon(AssetImage(Assets.icons.pen.path),color: Colors.blue,),
+          SizedBox(width: 10,),
+          Text("ویرایش عکس پروفایل",style: Theme.of(context).textTheme.headline3,)
+        ],)
         
         //
         ],

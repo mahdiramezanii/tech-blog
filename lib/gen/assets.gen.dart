@@ -48,8 +48,11 @@ class $AssetsImagesGen {
   /// File path: assets/images/slider.png
   AssetGenImage get slider => const AssetGenImage('assets/images/slider.png');
 
+  /// File path: assets/images/user.png
+  AssetGenImage get user => const AssetGenImage('assets/images/user.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [headicon, icon, programming, slider];
+  List<AssetGenImage> get values => [headicon, icon, programming, slider, user];
 }
 
 class Assets {
