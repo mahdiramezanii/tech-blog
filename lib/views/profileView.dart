@@ -58,11 +58,11 @@ class ProfileView extends StatelessWidget {
             
           },
           child:
-          SizedBox(
+          const SizedBox(
             height: 40,
             width: double.infinity,
             child: Center(
-              child: const Text("مقالات مورد علاقه ی من",style: TextStyle(
+              child:Text("مقالات مورد علاقه ی من",style: TextStyle(
               fontFamily: "dana",
               fontWeight: FontWeight.w300,
               fontSize: 16,
@@ -71,13 +71,81 @@ class ProfileView extends StatelessWidget {
             ),
           )  
           ),
-        
         Divider(
           color: Colors.black,
           height: 1.3,
           indent: size.width/6,
           endIndent: size.width/6,
-        )
+        ),
+
+        
+
+        Divider(
+          color: Colors.black,
+          height: 1.3,
+          indent: size.width/6,
+          endIndent: size.width/6,
+        ),
+        
+        InkWell(
+          onTap: () {
+            
+          },
+          child:
+          const SizedBox(
+            height: 40,
+            width: double.infinity,
+            child: Center(
+              child:Text("مقالات مورد علاقه ی من",style: TextStyle(
+              fontFamily: "dana",
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+              color:Colors.black
+                      ),),
+            ),
+          )  
+          ),
+        Divider(
+          color: Colors.black,
+          height: 1.3,
+          indent: size.width/6,
+          endIndent: size.width/6,
+        ),
+
+        Divider(
+          color: Colors.black,
+          height: 1.3,
+          indent: size.width/6,
+          endIndent: size.width/6,
+        ),
+        
+        InkWell(
+          splashColor: SolidCollors.primayColor,
+          onTap: () {
+            
+          },
+          child:
+          const SizedBox(
+            height: 40,
+            width: double.infinity,
+            child: Center(
+              child:Text("مقالات مورد علاقه ی من",style: TextStyle(
+              fontFamily: "dana",
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+              color:Colors.black
+                      ),),
+            ),
+          )  
+          ),
+        Divider(
+          color: Colors.black,
+          height: 1.3,
+          indent: size.width/6,
+          endIndent: size.width/6,
+        ),
+
+        SizedBox(height: 100,)
 
         
         //
