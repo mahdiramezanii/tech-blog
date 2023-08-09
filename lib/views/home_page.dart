@@ -8,7 +8,6 @@ import 'package:flutter_application_2/models/data.dart';
 import 'package:flutter_application_2/my_colors.dart';
 import 'package:flutter_application_2/my_string.dart';
 import 'package:flutter_application_2/views/profileView.dart';
-
 import 'homeBode.dart';
 
 class HomePage extends StatelessWidget {
@@ -41,47 +40,62 @@ class HomePage extends StatelessWidget {
              ) ,
           ),
           body: Stack(
-            children:
+          children:
           [
           Center(child: Positioned.fill(child: ProfileView(size: size))),
-          Positioned(
-            bottom: 10,
-            left: 10,
-            right: 10,
-            child: Container(
-              height: size.height/8,
-              
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                gradient: LinearGradient(colors: GradinatCollors.navigatorBackground)
-              ),
-              child: Container(
-                
-          
-              height: size.height/10,
-              width: 50,
-              decoration:  BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                gradient: LinearGradient(colors: GradinatCollors.buttonNavigation)
-          
-                
-              ),
-              child:Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  IconButton(onPressed: (){},
-                   icon: ImageIcon(AssetImage(Assets.icons.home.path)),color: Colors.white,),
-                  IconButton(onPressed: (){},
-                   icon: ImageIcon(AssetImage(Assets.icons.write.path)),color: Colors.white,),
-                  IconButton(onPressed: (){},
-                   icon: ImageIcon(AssetImage(Assets.icons.user.path),color: Colors.white,)),
-                ],
-              ),),
-              
-            ),
-          ),]),
+          //button Navigation
+          ButtonNavigation(size: size),]),
           
           ),
+    );
+  }
+}
+
+class ButtonNavigation extends StatelessWidget {
+  const ButtonNavigation({
+    super.key,
+    required this.size,
+  });
+
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      bottom: 10,
+      left: 10,
+      right: 10,
+      child: Container(
+        height: size.height/8,
+        
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          gradient: LinearGradient(colors: GradinatCollors.navigatorBackground)
+        ),
+        child: Container(
+          
+    
+        height: size.height/10,
+        width: 50,
+        decoration:  BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          gradient: LinearGradient(colors: GradinatCollors.buttonNavigation)
+    
+          
+        ),
+        child:Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(onPressed: (){},
+             icon: ImageIcon(AssetImage(Assets.icons.home.path)),color: Colors.white,),
+            IconButton(onPressed: (){},
+             icon: ImageIcon(AssetImage(Assets.icons.write.path)),color: Colors.white,),
+            IconButton(onPressed: (){},
+             icon: ImageIcon(AssetImage(Assets.icons.user.path),color: Colors.white,)),
+          ],
+        ),),
+        
+      ),
     );
   }
 }
