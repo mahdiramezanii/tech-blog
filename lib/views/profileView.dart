@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
 import 'package:flutter_application_2/models/data.dart';
 import 'package:flutter_application_2/my_colors.dart';
+import 'package:flutter_application_2/my_string.dart';
 
 
 class ProfileView extends StatelessWidget {
@@ -27,7 +28,7 @@ class ProfileView extends StatelessWidget {
           
           ImageIcon(AssetImage(Assets.icons.pen.path),color: Colors.blue,),
           SizedBox(width: 10,),
-          Text("ویرایش عکس پروفایل",style: Theme.of(context).textTheme.headline3,),
+          Text(MyString.editImageProfilestring,style: Theme.of(context).textTheme.headline3,),
           
           
         ],),
@@ -63,7 +64,7 @@ class ProfileView extends StatelessWidget {
             height: 40,
             width: double.infinity,
             child: Center(
-              child:Text("مقالات مورد علاقه ی من",style: TextStyle(
+              child:Text(MyString.myFavoratearticleString,style: TextStyle(
               fontFamily: "dana",
               fontWeight: FontWeight.w300,
               fontSize: 16,
@@ -98,7 +99,7 @@ class ProfileView extends StatelessWidget {
             height: 40,
             width: double.infinity,
             child: Center(
-              child:Text("پادکست های مورد علاقه ی من",style: TextStyle(
+              child:Text(MyString.myFavoratePdcastString,style: TextStyle(
               fontFamily: "dana",
               fontWeight: FontWeight.w300,
               fontSize: 16,
@@ -131,7 +132,7 @@ class ProfileView extends StatelessWidget {
             height: 40,
             width: double.infinity,
             child: Center(
-              child:Text("خروج از حساب کاربری",style: TextStyle(
+              child:Text(MyString.logOutMyAcount,style: TextStyle(
               fontFamily: "dana",
               fontWeight: FontWeight.w300,
               fontSize: 16,
