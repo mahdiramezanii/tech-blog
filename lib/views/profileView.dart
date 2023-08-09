@@ -51,6 +51,32 @@ class ProfileView extends StatelessWidget {
           height: 1.3,
           indent: size.width/6,
           endIndent: size.width/6,
+        ),
+        
+        InkWell(
+          onTap: () {
+            
+          },
+          child:
+          SizedBox(
+            height: 40,
+            width: double.infinity,
+            child: Center(
+              child: const Text("مقالات مورد علاقه ی من",style: TextStyle(
+              fontFamily: "dana",
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+              color:Colors.black
+                      ),),
+            ),
+          )  
+          ),
+        
+        Divider(
+          color: Colors.black,
+          height: 1.3,
+          indent: size.width/6,
+          endIndent: size.width/6,
         )
 
         
