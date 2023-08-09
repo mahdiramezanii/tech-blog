@@ -54,6 +54,7 @@ class ProfileView extends StatelessWidget {
         ),
         
         InkWell(
+          splashColor: SolidCollors.primayColor,
           onTap: () {
             
           },
@@ -88,6 +89,7 @@ class ProfileView extends StatelessWidget {
         ),
         
         InkWell(
+          splashColor: SolidCollors.primayColor,
           onTap: () {
             
           },
