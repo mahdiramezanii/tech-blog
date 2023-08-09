@@ -10,7 +10,12 @@ import 'package:flutter_application_2/my_string.dart';
 import 'package:flutter_application_2/views/profileView.dart';
 import 'homeBode.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
