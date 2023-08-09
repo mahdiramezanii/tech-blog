@@ -98,7 +98,7 @@ class ProfileView extends StatelessWidget {
             height: 40,
             width: double.infinity,
             child: Center(
-              child:Text("مقالات مورد علاقه ی من",style: TextStyle(
+              child:Text("پادکست های مورد علاقه ی من",style: TextStyle(
               fontFamily: "dana",
               fontWeight: FontWeight.w300,
               fontSize: 16,
@@ -131,7 +131,7 @@ class ProfileView extends StatelessWidget {
             height: 40,
             width: double.infinity,
             child: Center(
-              child:Text("مقالات مورد علاقه ی من",style: TextStyle(
+              child:Text("خروج از حساب کاربری",style: TextStyle(
               fontFamily: "dana",
               fontWeight: FontWeight.w300,
               fontSize: 16,
