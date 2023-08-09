@@ -40,7 +40,7 @@ class ProfileView extends StatelessWidget {
           fontSize: 18,
         ),),
         const SizedBox(height: 15,),
-        const Text("mahdiramazani@gmial.com",style: TextStyle(
+        const Text("mahdiramazani.official@gmial.com",style: TextStyle(
           fontFamily: "dana",
           fontSize: 16,
           fontWeight: FontWeight.w300,
