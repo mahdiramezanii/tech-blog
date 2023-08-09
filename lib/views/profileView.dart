@@ -16,19 +16,43 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
         child: Column(
-        //crossAxisAlignment: CrossAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-    
+          
         Image(image: AssetImage(Assets.images.user.path),height: 150,),
-        SizedBox(height: 35,),
+        const SizedBox(height: 35,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
           
           ImageIcon(AssetImage(Assets.icons.pen.path),color: Colors.blue,),
           SizedBox(width: 10,),
-          Text("ویرایش عکس پروفایل",style: Theme.of(context).textTheme.headline3,)
-        ],)
+          Text("ویرایش عکس پروفایل",style: Theme.of(context).textTheme.headline3,),
+          
+          
+        ],),
+        const SizedBox(height: 50,),
+        const Text("فاطمه امیری",style: TextStyle(
+          fontFamily: "dana",
+          fontWeight: FontWeight.w300,
+          color:Color.fromARGB(255, 160, 101, 215),
+          fontSize: 18,
+        ),),
+        const SizedBox(height: 15,),
+        const Text("mahdiramazani@gmial.com",style: TextStyle(
+          fontFamily: "dana",
+          fontSize: 16,
+          fontWeight: FontWeight.w300,
+        ),),
+        const SizedBox(height: 30,),
+
+        Divider(
+          color: Colors.black,
+          height: 1.3,
+          indent: size.width/6,
+          endIndent: size.width/6,
+        )
+
         
         //
         ],
