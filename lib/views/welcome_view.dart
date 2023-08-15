@@ -14,16 +14,38 @@ class WelcomPageView extends StatelessWidget{
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
              SvgPicture.asset(Assets.images.techbot.path,height: 100,),
-             RichText(
-              textAlign: TextAlign.center,
-              text: TextSpan(
-              
-              text:MyString.welcomString,
-              style: TextStyle(
-                color: Colors.black
+             Padding(
+               padding: const EdgeInsets.only(top:9.0),
+               child: RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
+                
+                text:MyString.welcomString,
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w300
+                ),
+
+                
+               )),
+             ),
+             ElevatedButton(
+              onPressed: (){},
+              child: Text("ثبت نام"),
+              style: ButtonStyle(
+                textStyle: MaterialStateProperty.resolveWith((states){
+
+                  if(states.contains(MaterialState.pressed)){
+                        return TextStyle(fontSize: 20);
+                  }
+                  else{
+                    return TextStyle(fontSize: 30);
+                  }
+                })
               ),
-              
-             ))
+              )
+            
              ], 
           ),
         ) ,
