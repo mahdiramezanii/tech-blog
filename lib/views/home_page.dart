@@ -54,7 +54,13 @@ class _HomePageState extends State<HomePage> {
           body: Stack(
           children:
           [
-          Center(child: Positioned.fill(child: viewList[selectedIndex])),
+          Center(child: Positioned.fill(child: IndexedStack(
+            index: selectedIndex,
+            children: [
+              HomeBody(size: size),
+    ProfileView(size: size),
+            ],
+          ))),
           //button Navigation
           ButtonNavigation(size: size, changePage: (int value){
               setState(() {
