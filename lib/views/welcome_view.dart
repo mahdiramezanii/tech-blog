@@ -34,37 +34,48 @@ class WelcomPageView extends StatelessWidget{
               onPressed: (){
 
               showModalBottomSheet(
-              
+              isScrollControlled: true,
               backgroundColor:Colors.transparent,
               context: context, builder: (BuildContext context){
                 
-                return Container(
-                  height: MediaQuery.of(context).size.height/3,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(topLeft:Radius.circular(20),topRight: Radius.circular(20)),
-                    color: Colors.white,
-                  ),
-
-                  child: Column(
-                    children: [
-                      Text("ایمیل  خودت رو وارد کن"),
-                      TextField(
-
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20),
-                            borderSide: BorderSide(width: 10)
-                          ),
-                          hintText: "@mahdiramazani@gmail.com",
-                          hintStyle: TextStyle(
-                            color: Colors.black,
-                            fontFamily: "dana",
-                            fontSize: 18,
-                            fontWeight: FontWeight.w300
-                          )
+                return Padding(
+                  padding:  EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height/3,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(topLeft:Radius.circular(20),topRight: Radius.circular(20)),
+                      color: Colors.white,
+                    ),
+                
+                    child: Column(
+                      
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: Text("ایمیل  خودت رو وارد کن",style: TextStyle(fontSize: 20,
+                          fontFamily: "dana",
+                          fontWeight: FontWeight.w300 ),),
                         ),
-                      )
-                    ],
+                        TextField(
+                          textAlign: TextAlign.left,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(width: 10)
+                            ),
+                            hintText: "@mahdiramazani@gmail.com",
+                            
+                            hintStyle: TextStyle(
+                              color: Colors.black,
+                              fontFamily: "dana",
+                              fontSize: 18,
+                              fontWeight: FontWeight.w300
+                            )
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 );
               });
