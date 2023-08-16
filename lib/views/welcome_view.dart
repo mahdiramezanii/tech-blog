@@ -31,7 +31,44 @@ class WelcomPageView extends StatelessWidget{
                )),
              ),
              ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+
+              showModalBottomSheet(
+              
+              backgroundColor:Colors.transparent,
+              context: context, builder: (BuildContext context){
+                
+                return Container(
+                  height: MediaQuery.of(context).size.height/3,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(topLeft:Radius.circular(20),topRight: Radius.circular(20)),
+                    color: Colors.white,
+                  ),
+
+                  child: Column(
+                    children: [
+                      Text("ایمیل  خودت رو وارد کن"),
+                      TextField(
+
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(width: 10)
+                          ),
+                          hintText: "@mahdiramazani@gmail.com",
+                          hintStyle: TextStyle(
+                            color: Colors.black,
+                            fontFamily: "dana",
+                            fontSize: 18,
+                            fontWeight: FontWeight.w300
+                          )
+                        ),
+                      )
+                    ],
+                  ),
+                );
+              });
+              },
               child: Text("ثبت نام"),
               style: ButtonStyle(
                 textStyle: MaterialStateProperty.resolveWith((states){
