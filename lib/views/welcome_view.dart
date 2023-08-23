@@ -58,13 +58,16 @@ class WelcomPageView extends StatelessWidget{
                           fontWeight: FontWeight.w300 ),),
                         ),
                         TextField(
+                          onChanged:(value){
+                            print(value);
+                          },
                           textAlign: TextAlign.left,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                               borderSide: BorderSide(width: 10)
                             ),
-                            hintText: "@mahdiramazani@gmail.com",
+                            hintText: "mahdiramazani@gmail.com",
                             
                             hintStyle: TextStyle(
                               color: Colors.black,
