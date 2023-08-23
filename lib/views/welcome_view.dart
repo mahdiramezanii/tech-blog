@@ -4,6 +4,7 @@ import 'package:flutter_application_2/my_string.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomPageView extends StatelessWidget{
+  RegExp is_email=RegExp("^[a-z-1-9]+@");
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
