@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
 import 'package:flutter_application_2/my_string.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:validators/validators.dart';
 
 class WelcomPageView extends StatelessWidget{
-  RegExp is_email=RegExp("^[a-z-1-9]+@");
+  
   @override
   Widget build(BuildContext context) {
+    RegExp is_email=RegExp("^[a-z-1-9]+@+^[gmail-yahoo]+.com");
     // TODO: implement build
     return  SafeArea(
       child: Scaffold(
@@ -60,7 +62,8 @@ class WelcomPageView extends StatelessWidget{
                         ),
                         TextField(
                           onChanged:(value){
-                            print(value);
+                           
+                            print(isEmail(value));
                           },
                           textAlign: TextAlign.left,
                           decoration: InputDecoration(
