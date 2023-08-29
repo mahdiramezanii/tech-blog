@@ -61,33 +61,37 @@ class WelcomPageView extends StatelessWidget{
                           fontFamily: "dana",
                           fontWeight: FontWeight.w300 ),),
                         ),
-                        TextField(
-                          onChanged:(value){
-                           
-                            print(isEmail(value));
-                          },
-                          
-                          textAlign: TextAlign.left,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20),
-                              borderSide: BorderSide(width: 10)
-                            ),
-                            hintText: "mahdiramazani@gmail.com",
+                        Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: TextField(
+                            onChanged:(value){
+                             
+                              print(isEmail(value));
+                            },
                             
-                            hintStyle: TextStyle(
-                              color: Colors.black,
-                              fontFamily: "dana",
-                              fontSize: 18,
-                              fontWeight: FontWeight.w300
-                            )
+                            textAlign: TextAlign.left,
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(width: 10)
+                              ),
+                              hintText: "mahdiramazani@gmail.com",
+                              
+                              hintStyle: TextStyle(
+                                color: Colors.black,
+                                fontFamily: "dana",
+                                fontSize: 18,
+                                fontWeight: FontWeight.w300
+                              )
+                            ),
                           ),
                         ),
-                        ElevatedButton(onPressed: (){},
-                         child: Text("بزن بریم"),style:ButtonStyle(
-                          textStyle: Theme.of(context).textTheme.headline1
-                         ) ,
-                         )
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0,20,0,0),
+                          child: ElevatedButton(onPressed: (){},
+                           child: Text("بزن بریم"),
+                           ),
+                        )
                       ],
                     ),
                   ),
