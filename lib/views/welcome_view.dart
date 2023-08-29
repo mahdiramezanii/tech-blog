@@ -9,6 +9,7 @@ class WelcomPageView extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     RegExp is_email=RegExp("^[a-z-1-9]+@+^[gmail-yahoo]+.com");
+    var textTheme=Theme.of(context);
     // TODO: implement build
     return  SafeArea(
       child: Scaffold(
@@ -55,7 +56,7 @@ class WelcomPageView extends StatelessWidget{
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
+                          padding:  EdgeInsets.only(bottom: 10),
                           child: Text("ایمیل  خودت رو وارد کن",style: TextStyle(fontSize: 20,
                           fontFamily: "dana",
                           fontWeight: FontWeight.w300 ),),
@@ -65,6 +66,7 @@ class WelcomPageView extends StatelessWidget{
                            
                             print(isEmail(value));
                           },
+                          
                           textAlign: TextAlign.left,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
@@ -80,7 +82,12 @@ class WelcomPageView extends StatelessWidget{
                               fontWeight: FontWeight.w300
                             )
                           ),
-                        )
+                        ),
+                        ElevatedButton(onPressed: (){},
+                         child: Text("بزن بریم"),style:ButtonStyle(
+                          textStyle: Theme.of(context).textTheme.headline1
+                         ) ,
+                         )
                       ],
                     ),
                   ),
