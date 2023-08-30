@@ -96,7 +96,7 @@ class WelcomPageView extends StatelessWidget{
                             print(isEmail(value));
                           },
                           
-                          textAlign: TextAlign.left,
+                          textAlign: TextAlign.center,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
