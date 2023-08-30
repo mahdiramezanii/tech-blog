@@ -116,7 +116,7 @@ class WelcomPageView extends StatelessWidget{
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0,20,0,0),
                         child: ElevatedButton(onPressed: (){
-
+                              _EnterCodeNavigation(context);
                         },
                          child: Text("بزن بریم"),
                          ),
@@ -163,6 +163,7 @@ class WelcomPageView extends StatelessWidget{
                           onChanged:(value){
                            
                             print(isEmail(value));
+
                           },
                           
                           textAlign: TextAlign.left,
