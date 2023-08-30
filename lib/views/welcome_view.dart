@@ -153,7 +153,7 @@ class WelcomPageView extends StatelessWidget{
                     children: [
                       Padding(
                         padding:  EdgeInsets.only(bottom: 10),
-                        child: Text("ایمیل  خودت رو وارد کن",style: TextStyle(fontSize: 20,
+                        child: Text("کد فعال سازی را وارد کنید",style: TextStyle(fontSize: 20,
                         fontFamily: "dana",
                         fontWeight: FontWeight.w300 ),),
                       ),
