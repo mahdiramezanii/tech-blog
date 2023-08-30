@@ -167,15 +167,16 @@ class WelcomPageView extends StatelessWidget{
 
                           },
                           
-                          textAlign: TextAlign.left,
+                          textAlign: TextAlign.center,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                               borderSide: BorderSide(width: 10)
                             ),
-                            hintText: "mahdiramazani@gmail.com",
+                            hintText: "کد ارسال شده را وارد کنید",
                             
                             hintStyle: TextStyle(
+                              
                               color: Colors.black,
                               fontFamily: "dana",
                               fontSize: 18,
