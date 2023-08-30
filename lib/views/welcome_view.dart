@@ -59,6 +59,8 @@ class WelcomPageView extends StatelessWidget{
         ) );
   }
 
+
+
   Future<dynamic> _showBottunNavigation(BuildContext context) {
     return showModalBottomSheet(
             isScrollControlled: true,
