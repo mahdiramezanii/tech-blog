@@ -189,7 +189,7 @@ class WelcomPageView extends StatelessWidget{
                         child: ElevatedButton(onPressed: (){
                           
                         },
-                         child: Text("بزن بریم"),
+                         child: Text("فعال سازی حساب"),
                          ),
                       )
                     ],
