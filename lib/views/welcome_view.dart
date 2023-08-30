@@ -116,6 +116,7 @@ class WelcomPageView extends StatelessWidget{
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0,20,0,0),
                         child: ElevatedButton(onPressed: (){
+                                Navigator.pop(context);
                               _EnterCodeNavigation(context);
                         },
                          child: Text("بزن بریم"),
