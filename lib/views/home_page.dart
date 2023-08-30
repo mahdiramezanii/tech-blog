@@ -32,6 +32,14 @@ class _HomePageState extends State<HomePage> {
           //header applixation
           drawer: Drawer(
             backgroundColor: Colors.amber,
+            child: ListView(
+              children: [
+                DrawerHeader(child: Image(image: AssetImage(Assets.images.icon.path),)),
+                ListTile(
+                  title: Text("حساب کاربری"),
+                )
+              ],
+            ),
             ),
           appBar: AppBar(
             elevation: 0,
