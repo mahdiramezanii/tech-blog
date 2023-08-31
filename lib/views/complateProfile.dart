@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/models/data.dart';
 import 'package:flutter_application_2/my_colors.dart';
 import 'package:flutter_application_2/my_string.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -48,7 +49,7 @@ class ComplateProfile extends StatelessWidget {
                   physics: ClampingScrollPhysics(),
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  itemCount: 30,
+                  itemCount: category_item.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 20,
@@ -68,14 +69,22 @@ class ComplateProfile extends StatelessWidget {
                       children: [
 
                         ImageIcon(AssetImage(Assets.icons.hashtag.path),color: Colors.white,),
-                        Text("مهدی رمضانی  ",style: Theme.of(context).textTheme.headline2,),
+                        Text(category_item[index].name!,style: Theme.of(context).textTheme.headline2,),
                         
                       ],
+
                     ),
+
                   );
                 }),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Center(
+              child: ImageIcon(AssetImage(Assets.images.flash.path),size: 50,),
+              ),
+            )
 
           ],
               ),
