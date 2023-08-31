@@ -38,28 +38,30 @@ class ComplateProfile extends StatelessWidget {
             Text("""دسته بندی هایی که دوست داری رو انتخاب کن""",style: Theme.of(context).textTheme.bodyText1,),
           
             SizedBox(
-              height: 100,
-              width: double.infinity,
+              height: 200,
+              width:double.infinity,
+              
               child: GridView.builder(
-                shrinkWrap: true,
+                
                 physics: ClampingScrollPhysics(),
+                shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: 30,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 20,
-                mainAxisSpacing: 20
+                mainAxisSpacing: 20,
+                childAspectRatio: 0.2
               ), itemBuilder: (BuildContext context , int index){
           
-                return  Container(
-                  height: 200,
-                  
-      
+                return Container(
+                  height: 100,
+                  width:MediaQuery.of(context).size.width/4,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     gradient: LinearGradient(colors: GradinatCollors.hashtagGradinatColor)
                   ),
-                  child: Center(child: Text("برنامه نویسی",style: TextStyle(color: Colors.white),)),
+                  child: Center(child: Text("مهدی رمضانی  ",style: TextStyle(color: Colors.white),)),
                 );
               }),
             )
