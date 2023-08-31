@@ -38,7 +38,7 @@ class ComplateProfile extends StatelessWidget {
             Text("""دسته بندی هایی که دوست داری رو انتخاب کن""",style: Theme.of(context).textTheme.bodyText1,),
           
             SizedBox(
-              height: 200,
+              height: 80,
               width:double.infinity,
               
               child: GridView.builder(
@@ -56,7 +56,7 @@ class ComplateProfile extends StatelessWidget {
           
                 return Container(
                   height: 100,
-                  width:MediaQuery.of(context).size.width/4,
+                  width:MediaQuery.of(context).size.width/10,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     gradient: LinearGradient(colors: GradinatCollors.hashtagGradinatColor)
