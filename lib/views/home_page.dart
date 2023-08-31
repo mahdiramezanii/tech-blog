@@ -15,6 +15,7 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+
 class _HomePageState extends State<HomePage> {
   var selectedIndex=0;
   
@@ -29,15 +30,43 @@ class _HomePageState extends State<HomePage> {
 
     return SafeArea(
       child: Scaffold(
+         
           //header applixation
           drawer: Drawer(
-            backgroundColor: Color.fromARGB(255, 220, 219, 219),
+            backgroundColor: Color.fromARGB(255, 243, 242, 242),
             child: ListView(
               children: [
                 DrawerHeader(child: Image(image: AssetImage(Assets.images.icon.path),)),
+                Divider(
+                    color: Colors.black,
+                ),
                 ListTile(
                   title: Text("حساب کاربری"),
-                )
+                ),
+                Divider(
+                    color: Colors.black,
+                ),
+                ListTile(
+                  title: Text("حساب کاربری"),
+                ),
+                Divider(
+                    color: Colors.black,
+                ),
+                ListTile(
+                  title: Text("حساب کاربری"),
+                ),
+                Divider(
+                    color: Colors.black,
+                ),
+                ListTile(
+                  title: Text("حساب کاربری"),
+                ),
+                Divider(
+                    color: Colors.black,
+                ),
+                ListTile(
+                  title: Text("حساب کاربری"),
+                ),
               ],
             ),
             ),
