@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
           //header applixation
           drawer: Drawer(
-            backgroundColor: Colors.amber,
+            backgroundColor: Color.fromARGB(255, 220, 219, 219),
             child: ListView(
               children: [
                 DrawerHeader(child: Image(image: AssetImage(Assets.images.icon.path),)),
@@ -42,6 +42,7 @@ class _HomePageState extends State<HomePage> {
             ),
             ),
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             elevation: 0,
             backgroundColor: Colors.white,
             title: Padding(

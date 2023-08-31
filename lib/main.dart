@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget{
         )
       ),
     // home: splach_screan(),
-    home: WelcomPageView(),
+    home: splach_screan(),
     );
   }
 
