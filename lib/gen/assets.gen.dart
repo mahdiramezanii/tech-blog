@@ -36,6 +36,9 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/flash.png
+  AssetGenImage get flash => const AssetGenImage('assets/images/flash.png');
+
   /// File path: assets/images/headicon.png
   AssetGenImage get headicon =>
       const AssetGenImage('assets/images/headicon.png');
@@ -58,7 +61,7 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<dynamic> get values =>
-      [headicon, icon, programming, slider, techbot, user];
+      [flash, headicon, icon, programming, slider, techbot, user];
 }
 
 class Assets {
