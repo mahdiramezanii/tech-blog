@@ -37,34 +37,46 @@ class ComplateProfile extends StatelessWidget {
             ),
             Text("""دسته بندی هایی که دوست داری رو انتخاب کن""",style: Theme.of(context).textTheme.bodyText1,),
           
-            SizedBox(
-              height: 80,
-              width:double.infinity,
-              
-              child: GridView.builder(
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                height: 90,
+                width:double.infinity,
                 
-                physics: ClampingScrollPhysics(),
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemCount: 30,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 20,
-                mainAxisSpacing: 20,
-                childAspectRatio: 0.2
-              ), itemBuilder: (BuildContext context , int index){
-          
-                return Container(
-                  height: 100,
-                  width:MediaQuery.of(context).size.width/10,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    gradient: LinearGradient(colors: GradinatCollors.hashtagGradinatColor)
-                  ),
-                  child: Center(child: Text("مهدی رمضانی  ",style: TextStyle(color: Colors.white),)),
-                );
-              }),
-            )
+                child: GridView.builder(
+                  
+                  physics: ClampingScrollPhysics(),
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 30,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                  childAspectRatio: 0.2
+                ), itemBuilder: (BuildContext context , int index){
+                      
+                  return Container(
+                    height: 100,
+                    width:MediaQuery.of(context).size.width/10,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      gradient: LinearGradient(colors: GradinatCollors.hashtagGradinatColor)
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+
+                        ImageIcon(AssetImage(Assets.icons.hashtag.path),color: Colors.white,),
+                        Text("مهدی رمضانی  ",style: Theme.of(context).textTheme.headline2,),
+                        
+                      ],
+                    ),
+                  );
+                }),
+              ),
+            ),
+
           ],
               ),
         ),
