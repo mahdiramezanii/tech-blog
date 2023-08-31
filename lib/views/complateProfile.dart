@@ -1,6 +1,7 @@
 import 'dart:ffi';
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/models/data.dart';
 import 'package:flutter_application_2/my_colors.dart';
@@ -8,7 +9,12 @@ import 'package:flutter_application_2/my_string.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
 
-class ComplateProfile extends StatelessWidget {
+class ComplateProfile extends StatefulWidget {
+  @override
+  State<ComplateProfile> createState() => _ComplateProfileState();
+}
+
+class _ComplateProfileState extends State<ComplateProfile> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -72,9 +78,22 @@ class ComplateProfile extends StatelessWidget {
                               AssetImage(Assets.icons.hashtag.path),
                               color: Colors.white,
                             ),
-                            Text(
-                              category_item[index].name!,
-                              style: Theme.of(context).textTheme.headline2,
+                            InkWell(
+                              onTap: (){
+                                setState(() {
+                                  if (selectedCat.contains(category_item[index])){
+                                  print("mhj");
+                                  }else{
+                                    selectedCat.add(category_item[index]);
+                                  }
+
+                                });
+                                
+                              },
+                              child: Text(
+                                category_item[index].name!,
+                                style: Theme.of(context).textTheme.headline2,
+                              ),
                             ),
                           ],
                         ),
@@ -100,7 +119,7 @@ class ComplateProfile extends StatelessWidget {
                   physics: ClampingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
-                    itemCount: category_item.length,
+                    itemCount: selectedCat.length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       mainAxisSpacing: 20,
@@ -118,10 +137,14 @@ class ComplateProfile extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            ImageIcon(
-                              AssetImage(Assets.icons.hashtag.path),
-                              color: Colors.white,
-                            ),
+                            InkWell(
+                              onTap: (){
+
+                                setState(() {
+                                  selectedCat.removeAt(index);
+                                });
+                              },
+                              child: Icon(CupertinoIcons.delete,color: Colors.white,)),
                             Text(
                               category_item[index].name!,
                               style: Theme.of(context).textTheme.headline2,
