@@ -4,8 +4,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/models/data.dart';
-import 'package:flutter_application_2/my_colors.dart';
-import 'package:flutter_application_2/my_string.dart';
+import 'package:flutter_application_2/component/my_colors.dart';
+import 'package:flutter_application_2/component/my_string.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
 
