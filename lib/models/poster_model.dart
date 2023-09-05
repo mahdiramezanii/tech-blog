@@ -1,6 +1,5 @@
 class Poster{
 
-
   String? id;
   String? title;
   String? image;
@@ -12,6 +11,6 @@ class Poster{
     required this.image
   });
 
-  
+
 
 }
