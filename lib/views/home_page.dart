@@ -9,107 +9,121 @@ import 'package:flutter_application_2/component/my_colors.dart';
 import 'package:flutter_application_2/component/my_string.dart';
 import 'package:flutter_application_2/views/profileView.dart';
 import 'homeBode.dart';
-
-class HomePage extends StatefulWidget {
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
+import "package:get/get.dart";
 
 
-class _HomePageState extends State<HomePage> {
-  var selectedIndex=0;
-  
+
+class HomePage extends StatelessWidget {
+  RxInt selectedIndex = 0.obs;
+
   @override
   Widget build(BuildContext context) {
-    
     var size = MediaQuery.of(context).size;
-    List <Widget> viewList=[
-    HomeBody(size: size),
-    ProfileView(size: size),
-  ];
+    List<Widget> viewList = [
+      HomeBody(size: size),
+      ProfileView(size: size),
+    ];
 
     return SafeArea(
       child: Scaffold(
-         
-          //header applixation
-          drawer: Drawer(
-            backgroundColor: Color.fromARGB(255, 243, 242, 242),
-            child: ListView(
+        //header applixation
+        drawer: Drawer(
+          backgroundColor: Color.fromARGB(255, 243, 242, 242),
+          child: ListView(
+            children: [
+              DrawerHeader(
+                  child: Image(
+                image: AssetImage(Assets.images.icon.path),
+              )),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                title: Text("حساب کاربری"),
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                title: Text("حساب کاربری"),
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                title: Text("حساب کاربری"),
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                title: Text("حساب کاربری"),
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                title: Text("حساب کاربری"),
+              ),
+            ],
+          ),
+        ),
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          elevation: 0,
+          backgroundColor: Colors.white,
+          title: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+            child: Column(
               children: [
-                DrawerHeader(child: Image(image: AssetImage(Assets.images.icon.path),)),
-                Divider(
-                    color: Colors.black,
-                ),
-                ListTile(
-                  title: Text("حساب کاربری"),
-                ),
-                Divider(
-                    color: Colors.black,
-                ),
-                ListTile(
-                  title: Text("حساب کاربری"),
-                ),
-                Divider(
-                    color: Colors.black,
-                ),
-                ListTile(
-                  title: Text("حساب کاربری"),
-                ),
-                Divider(
-                    color: Colors.black,
-                ),
-                ListTile(
-                  title: Text("حساب کاربری"),
-                ),
-                Divider(
-                    color: Colors.black,
-                ),
-                ListTile(
-                  title: Text("حساب کاربری"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    const Icon(
+                      Icons.menu,
+                      size: 35,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                        height: size.height / 13.6,
+                        width: size.width / 3.7,
+                        child: Image(
+                            image: AssetImage(Assets.images.headicon.path))),
+                    const Icon(
+                      Icons.search,
+                      size: 35,
+                      color: Colors.black,
+                    ),
+                  ],
                 ),
               ],
             ),
-            ),
-          appBar: AppBar(
-            automaticallyImplyLeading: false,
-            elevation: 0,
-            backgroundColor: Colors.white,
-            title: Padding(
-              padding: const EdgeInsets.fromLTRB(0,10,0,0),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      const Icon(Icons.menu,size: 35,color: Colors.black,),
-                      SizedBox(
-                          height: size.height/13.6,
-                          width: size.width/3.7,
-                          child: Image(image: AssetImage(Assets.images.headicon.path))),
-                      const Icon(Icons.search,size: 35,color: Colors.black,),],
-                  ),
-                ],
-              ),
-             ) ,
           ),
-          body: Stack(
-          children:
-          [
-          Center(child: Positioned.fill(child: IndexedStack(
-            index: selectedIndex,
+        ),
+        body: Obx((){
+          return Stack(children: [
+          Center(
+              child: Positioned.fill(
+                  child: IndexedStack(
+            index: selectedIndex.value,
             children: [
               HomeBody(size: size),
-    ProfileView(size: size),
+              ProfileView(size: size),
             ],
           ))),
           //button Navigation
-          ButtonNavigation(size: size, changePage: (int value){
-              setState(() {
-                selectedIndex=value;
-              });
-          },),]),
+          ButtonNavigation(
+            size: size,
+            changePage: (int value) {
+              
+                selectedIndex.value = value;
+              
+            },
+          )
           
-          ),
+        ]);
+        })
+      ),
     );
   }
 }
@@ -119,12 +133,10 @@ class ButtonNavigation extends StatelessWidget {
     super.key,
     required this.size,
     required this.changePage,
-    
   });
 
   final Size size;
   final Function changePage;
-  
 
   @override
   Widget build(BuildContext context) {
@@ -133,41 +145,45 @@ class ButtonNavigation extends StatelessWidget {
       left: 10,
       right: 10,
       child: Container(
-        height: size.height/8,
-        
+        height: size.height / 8,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          gradient: LinearGradient(colors: GradinatCollors.navigatorBackground)
-        ),
+            borderRadius: BorderRadius.circular(30),
+            gradient:
+                LinearGradient(colors: GradinatCollors.navigatorBackground)),
         child: Container(
-          
-    
-        height: size.height/10,
-        width: 50,
-        decoration:  BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          gradient: LinearGradient(colors: GradinatCollors.buttonNavigation)
-    
-          
+          height: size.height / 10,
+          width: 50,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              gradient:
+                  LinearGradient(colors: GradinatCollors.buttonNavigation)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                onPressed: () {
+                  changePage(0);
+                },
+                icon: ImageIcon(AssetImage(Assets.icons.home.path)),
+                color: Colors.white,
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: ImageIcon(AssetImage(Assets.icons.write.path)),
+                color: Colors.white,
+              ),
+              IconButton(
+                  onPressed: () {
+                    changePage(1);
+                  },
+                  icon: ImageIcon(
+                    AssetImage(Assets.icons.user.path),
+                    color: Colors.white,
+                  )),
+            ],
+          ),
         ),
-        child:Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(onPressed: (){
-              changePage(0);
-            },
-             icon: ImageIcon(AssetImage(Assets.icons.home.path)),color: Colors.white,),
-            IconButton(onPressed: (){},
-             icon: ImageIcon(AssetImage(Assets.icons.write.path)),color: Colors.white,),
-            IconButton(onPressed: (){
-              changePage(1);
-            },
-             icon: ImageIcon(AssetImage(Assets.icons.user.path),color: Colors.white,)),
-          ],
-        ),),
-        
       ),
     );
   }
 }
-
