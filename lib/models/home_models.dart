@@ -11,34 +11,28 @@ class TopVisited{
 
   TopVisited(
     {
-      required this.id,
-      required this.title,
-      required this.image,
-      required this.cat_id,
-      required this.author,
-      required this.view,
-      required this.status
+      this.id,
+      this.title,
+      this.image,
+      this.cat_id,
+      this.author,
+      this.view,
+      this.status
     }
-  )
+  );
 
-  TopVisited.fromJson(Map<String,dynamic> element{
+  TopVisited.fromJson(Map<String,dynamic> element){
 
-    
+      id=element["id"];
+      title=element["title"];
+      image=element["image"];
+      cat_id=element["cat_id"];
+      author=element["author"];
+      view=element["view"];
+      status=element["status"];
 
-  } )
+  }
 
 
 
 }
-
-        // {
-        //     "id": "1",
-        //     "title": "۵ بازی مشابه Assassin’s Creed Valhalla که باید بازی کنید",
-        //     "image": "/Techblog/assets/upload/images/article/valhalla.jpg",
-        //     "cat_id": "1",
-        //     "cat_name": "اخبار و مقالات",
-        //     "author": "بهرام امینی",
-        //     "view": "2990",
-        //     "status": "1",
-        //     "created_at": "۱۴۰۱/۲/۱۶"
-        // },
