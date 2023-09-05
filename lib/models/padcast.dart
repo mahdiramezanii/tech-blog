@@ -1,4 +1,4 @@
-import 'package:flutter_application_2/models/poster_model.dart';
+
 
 class Padcast{
 
