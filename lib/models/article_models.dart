@@ -1,4 +1,4 @@
-class TopVisited{
+class Articles{
 
   String? id;
   String? title;
@@ -8,8 +8,7 @@ class TopVisited{
   String? view;
   String? status;
 
-
-  TopVisited(
+  Articles(
     {
       this.id,
       this.title,
@@ -21,7 +20,7 @@ class TopVisited{
     }
   );
 
-  TopVisited.fromJson(Map<String,dynamic> element){
+  Articles.fromJson(Map<String,dynamic> element){
 
       id=element["id"];
       title=element["title"];
