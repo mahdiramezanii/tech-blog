@@ -15,8 +15,8 @@ class DioSerice{
         responseType: ResponseType.json,method: "Get" 
       )).then((response) {
         
-        print(response.toString());
         
+
         return response;
         
       });

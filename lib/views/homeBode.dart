@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/constant/api_constant.dart';
+import 'package:flutter_application_2/controller/home_controller.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
 import 'package:flutter_application_2/models/data.dart';
 import 'package:flutter_application_2/component/my_colors.dart';
@@ -7,16 +8,20 @@ import 'package:flutter_application_2/services/services.dart';
 
 
 class HomeBody extends StatelessWidget {
-  const HomeBody({
+   HomeBody({
     super.key,
     required this.size,
   });
 
   final Size size;
 
+  HomeScreanController homeScreanController=HomeScreanController();
+
   @override
   Widget build(BuildContext context) {
-    DioSerice().getMethod(ApiUrlConstant.get_home_items);
+    
+    homeScreanController.getHomeItems();
+
     return SingleChildScrollView(
         child: Column(
         //crossAxisAlignment: CrossAxisAlignment.center,
