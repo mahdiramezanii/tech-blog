@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:dio/dio.dart';
 
 class DioSerice{
@@ -11,7 +13,10 @@ class DioSerice{
       url,options: Options(
         responseType: ResponseType.json,method: "Get" 
       )).then((response) {
+        
+        print(response.toString());
 
+        return response;
         
       });
   }
