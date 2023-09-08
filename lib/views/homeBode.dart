@@ -5,6 +5,7 @@ import 'package:flutter_application_2/gen/assets.gen.dart';
 import 'package:flutter_application_2/models/data.dart';
 import 'package:flutter_application_2/component/my_colors.dart';
 import 'package:flutter_application_2/services/services.dart';
+import 'package:get/get.dart';
 
 
 class HomeBody extends StatelessWidget {
@@ -15,7 +16,7 @@ class HomeBody extends StatelessWidget {
 
   final Size size;
 
-  HomeScreanController homeScreanController=HomeScreanController();
+  HomeScreanController homeScreanController=Get.put(HomeScreanController());
 
   @override
   Widget build(BuildContext context) {
@@ -128,75 +129,76 @@ class HomeBody extends StatelessWidget {
               ),
             ),
             //List View Slider Hot Text
-            SizedBox(
-              height:size.height/3.2,
-              
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 5,
-                itemBuilder: (BuildContext context,int index){
-        
-                  return Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Stack(
-                        children:[ 
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(size.width/18,0,index==0?size.width/12:0,0),
-                          child: Container(
-                            height:size.height/4.6,
-                            width: size.width/2.50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(16),
-                              image: DecorationImage(
-                              image: AssetImage(Assets.images.slider.path),
-                              fit: BoxFit.cover )
-                            ),
-                            foregroundDecoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(16),
-                              gradient: const LinearGradient(colors: GradinatCollors.listViewHotText,
-                              begin: Alignment.bottomCenter,
-                              end: Alignment.topCenter
-                              )
+            Obx(
+              ()=> SizedBox(
+                height:size.height/3.2,
+                
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: homeScreanController.articleList.length,
+                  itemBuilder: (BuildContext context,int index){
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Stack(
+                          children:[ 
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(size.width/18,0,index==0?size.width/12:0,0),
+                            child: Container(
+                              height:size.height/4.6,
+                              width: size.width/2.50,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                image: DecorationImage(
+                                image:AssetImage(homeScreanController.articleList[index].image!),
+                                fit: BoxFit.cover )
+                              ),
+                              foregroundDecoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                gradient: const LinearGradient(colors: GradinatCollors.listViewHotText,
+                                begin: Alignment.bottomCenter,
+                                end: Alignment.topCenter
+                                )
+                              ),
                             ),
                           ),
-                        ),
-                        Positioned(
-                          bottom: 5,
-                          left: 30,
-                          right: 10,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                            Text("ملیکا عزیزی",style: Theme.of(context).textTheme.headline1,),
-                            Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text("250 ",style: Theme.of(context).textTheme.headline1,),
-                        Icon(Icons.remove_red_eye,color: Colors.white,)
-                      ],
-                    ),
-                          ],),
-                        ),
-                    ]),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20,0,0,0),
-                      child: SizedBox(
-                       width: size.width/2.50,
-                        child:const Text("به مام حدا مهدی رمضانی هستم برنامه نویس اندروید و ios",
-                        overflow: TextOverflow.ellipsis,
-                        style:TextStyle(
-                          fontFamily: "dana",
-                          fontSize: 16,
-                          color: Colors.black
-                        ),
-                        maxLines: 2,
+                          Positioned(
+                            bottom: 5,
+                            left: 30,
+                            right: 10,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                              Text(homeScreanController.articleList[index].author!,style: Theme.of(context).textTheme.headline1,),
+                              Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(homeScreanController.articleList[index].view!,style: Theme.of(context).textTheme.headline1,),
+                          Icon(Icons.remove_red_eye,color: Colors.white,)
+                        ],
+                      ),
+                            ],),
+                          ),
+                      ]),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                        child: SizedBox(
+                         width: size.width/2.50,
+                          child:const Text("به مام حدا مهدی رمضانی هستم برنامه نویس اندروید و ios",
+                          overflow: TextOverflow.ellipsis,
+                          style:TextStyle(
+                            fontFamily: "dana",
+                            fontSize: 16,
+                            color: Colors.black
+                          ),
+                          maxLines: 2,
+                          ),
                         ),
                       ),
-                    ),
-                    ],
-                  );
-                }),
+                      ],
+                    );
+                  }),
+              ),
             ),
             
           ],
