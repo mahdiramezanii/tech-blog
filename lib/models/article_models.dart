@@ -1,3 +1,5 @@
+import 'package:flutter_application_2/constant/api_constant.dart';
+
 class Articles{
 
   String? id;
@@ -24,7 +26,7 @@ class Articles{
 
       id=element["id"];
       title=element["title"];
-      image=element["image"];
+      image=ApiUrlConstant.hostUrl+element["image"];
       cat_id=element["cat_id"];
       author=element["author"];
       view=element["view"];
