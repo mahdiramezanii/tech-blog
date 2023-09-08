@@ -21,7 +21,7 @@ class HomeScreanController extends GetxController{
         response.data["top_visited"].forEach((element){
 
             articleList.add(Articles.fromJson(element));
-
+            
             
         });
       }
